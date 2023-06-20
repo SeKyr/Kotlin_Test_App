@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.calculation_view.CalculationViewFragment"
+    android:gravity="center">
+
+    <com.example.kotlin_test_app.ui.components.CalculationWidget
+        android:id="@+id/fib_calculation_widget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:algorithmName="Fib"/>
+    <com.example.kotlin_test_app.ui.components.CalculationWidget
+        android:id="@+id/matrix_calculation_widget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:algorithmName="Matrix"/>
+    <com.example.kotlin_test_app.ui.components.CalculationWidget
+        android:id="@+id/binary_calculation_widget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:algorithmName="Binary"/>
+    <com.example.kotlin_test_app.ui.components.CalculationWidget
+        android:id="@+id/array_calculation_widget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:algorithmName="Array"/>
+</LinearLayout>

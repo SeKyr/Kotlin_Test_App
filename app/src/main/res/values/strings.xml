@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Kotlin_test_app</string>
+    <string name="title_ui_view">UI-View</string>
+    <string name="title_calculation_view">Calculation-View</string>
+</resources>

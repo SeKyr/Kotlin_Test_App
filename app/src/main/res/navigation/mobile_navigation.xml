@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_ui_view">
+
+    <fragment
+        android:id="@+id/navigation_ui_view"
+        android:name="com.example.kotlin_test_app.ui.ui_view.UIViewFragment"
+        android:label="@string/title_ui_view"
+        tools:layout="@layout/fragment_ui_view" />
+
+    <fragment
+        android:id="@+id/navigation_calculation_view"
+        android:name="com.example.kotlin_test_app.ui.calculation_view.CalculationViewFragment"
+        android:label="@string/title_calculation_view"
+        tools:layout="@layout/fragment_calculation_view" />
+</navigation>
