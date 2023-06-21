@@ -34,7 +34,7 @@ class CalculationWidget @JvmOverloads constructor(
 
         nInput.setOnStartListener(object : NInput.OnStartListener {
             override fun onStart(number: Int) {
-                textNAndExecutionTime.text = "${algorithmImplementation?.let { it(number) }}μs; n = $number"
+                textNAndExecutionTime.text = "${algorithmImplementation?.let { it(number) }}ms; n = $number"
             }
         })
     }

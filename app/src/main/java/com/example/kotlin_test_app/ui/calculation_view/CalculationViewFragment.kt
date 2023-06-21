@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import com.example.kotlin_test_app.databinding.FragmentCalculationViewBinding
 import com.example.kotlin_test_app.ui.components.CalculationWidget
 import kotlin.math.sin
-import kotlin.system.measureNanoTime
+import kotlin.system.measureTimeMillis
 
 class CalculationViewFragment : Fragment() {
 
@@ -44,7 +44,7 @@ class CalculationViewFragment : Fragment() {
     }
 
     private fun fibonacciAlgorithm(n: Int): Long {
-        return measureNanoTime{ fib(n) } / 1000;
+        return measureTimeMillis{ fib(n) };
     }
 
     private fun fib(n: Int): Int {
@@ -59,7 +59,7 @@ class CalculationViewFragment : Fragment() {
         val secondMatrix: List<List<Int>> = List(n) { row -> List(n) { column -> (row + 1) + (column + 1) } };
         val resultMatrix: List<MutableList<Int>> = List(n) { List(n) { 0 }.toMutableList() }
 
-        return measureNanoTime {
+        return measureTimeMillis {
             for (row in 0 until n) {
                 for (col in 0 until n) {
                     var cell = 0
@@ -69,16 +69,16 @@ class CalculationViewFragment : Fragment() {
                     resultMatrix[row][col] = cell
                 }
             }
-        } / 1000
+        }
     }
 
     private fun binarySearchTreeAlgorithm(n: Int): Long {
         val data: List<Int> = List(n) { ((sin(it.toDouble()) - sin((it + 1).toDouble())) * 1000).toInt() }
-        return measureNanoTime {
+        return measureTimeMillis {
             for (element in data) {
                 insert(element);
             }
-        } / 1000
+        }
     }
 
     class Node(var data: Int, var left: Node?, var right: Node?)
@@ -116,9 +116,9 @@ class CalculationViewFragment : Fragment() {
 
     private fun reverseArrayAlgorithm(n: Int): Long {
         val array: List<Int> = List(n) { it }
-        return measureNanoTime {
+        return measureTimeMillis {
             reverse(array);
-        } / 1000
+        }
     }
 
     private fun reverse(toReverse: List<Int>): MutableList<Int> {
