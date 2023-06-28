@@ -74,6 +74,7 @@ class CalculationViewFragment : Fragment() {
 
     private fun binarySearchTreeAlgorithm(n: Int): Long {
         val data: List<Int> = List(n) { ((sin(it.toDouble()) - sin((it + 1).toDouble())) * 1000).toInt() }
+        root = null;
         return measureTimeMillis {
             for (element in data) {
                 insert(element);
